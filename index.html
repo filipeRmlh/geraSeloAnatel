@@ -5,44 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GeraSelo</title>
-  <style>
-      body{
-          margin: 0;
-      }
-      #canvasContainer{
-          position: relative;
-      }
-      #canvasContainer >canvas{
-          background-color: transparent;
-          position: relative;
-          max-width: 900px !important;
-          max-height: 600px !important;
-          background-image: url('lib/bg.png');
-          background-size: 15px;
-      }
-  </style>
+    <link rel="stylesheet" href="lib/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 </head>
 <body>
     
-    <div class="inputContainer">
-        <div class="inputcontainer">
-            <label for="">Número Anatel</label>
-            <input name="numAnatel" type="text" value="" placeholder="00000-00-0000">
-        </div>
-        <div class="inputcontainer">
-            <label for="">Cor de Fundo</label>
-            <input name="bgColor" type="color" value="#ffffff">
-        </div>
-        <div>
-            <label for="">tamanho</label>
-            <input name="size" type="range" min="100" max="1000">
-        </div>
-        <div>
-            <label for="">opacidade do fundo</label>
-            <input name="opacity" type="range" min="0" max="100">
-        </div>
-        
-       <a id="download" href="#">Download</a>
+    <div class="sidebar">
+            <a id="openSidebar" class="openSidebar">
+                <span>
+                        <i class="fas fa-bars"></i>
+                </span>    
+            </a>
+            <div class="dataContainer">
+                    <div id="title">
+                        GeraSelo
+                    </div>
+                    <div class="inputcontainer">
+                        <label for="">Número Anatel</label>
+                        <input name="numAnatel" type="text" value="00000-00-00000" placeholder="00000-00-00000">
+                    </div>
+                    <div class="inputcontainer">
+                        <label for="">Cor de Fundo</label>
+                        <input name="bgColor" type="color" value="#ffffff">
+                    </div>
+                    <div>
+                        <label for="">Tamanho(<span id="labelSize"></span>)</label>
+                        <input name="size" type="range" min="100" max="1000">
+                    </div>
+                    <div>
+                        <label for="">Opacidade do fundo(<span id="labelOpacity"></span>)</label>
+                        <input name="opacity" type="range" min="0" max="100" value="100">
+                    </div>
+                    <div>
+                        <a id="download" href="#">Download</a>
+                    </div>
+                   
+                   <div class="badgeContainer">
+                        <a class="badge" href="https://github.com/filipeRmlh" target="_blank"><i class="fas fa-user-circle"></i> Filipe Ramalho</a>
+                        <a class="badge" href="https://github.com/filipeRmlh/geraSeloAnatel" target="_blank"><i class="fab fa-github"></i> Github</a>
+                   </div>
+                </div>
     </div>
     <div id="canvasContainer" >
             <canvas id="canvas" data-src="lib/SeloAnatel.svg"></canvas>
