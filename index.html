@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GeraSelo</title>
+  <style>
+      body{
+          margin: 0;
+      }
+      #canvasContainer{
+          position: relative;
+      }
+      #canvasContainer >canvas{
+          background-color: transparent;
+          position: relative;
+          max-width: 900px !important;
+          max-height: 600px !important;
+          background-image: url('lib/bg.png');
+          background-size: 15px;
+      }
+  </style>
+</head>
+<body>
+    
+    <div class="inputContainer">
+        <div class="inputcontainer">
+            <label for="">Número Anatel</label>
+            <input name="numAnatel" type="text" value="" placeholder="00000-00-0000">
+        </div>
+        <div class="inputcontainer">
+            <label for="">Cor de Fundo</label>
+            <input name="bgColor" type="color" value="#ffffff">
+        </div>
+        <input name="size" type="range" min="100" max="1000">
+        <input name="opacity" type="range" min="0" max="100">
+       <a id="download" href="#">Download</a>
+    </div>
+    <div id="canvasContainer" >
+            <canvas id="canvas" data-src="lib/SeloAnatel.svg"></canvas>
+        </div>
+    <script type="text/javascript" src="lib/selo.js"></script>
+    <script type="text/javascript" src="lib/main.js"></script>
+</body>
+</html>
